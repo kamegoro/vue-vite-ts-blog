@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -12,12 +13,13 @@
 
 <script lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
+import Header from './components/Header.vue';
 import { 
   defineComponent,
 } from 'vue';
 
 export default defineComponent({
-  components: { HelloWorld }
+  components: { HelloWorld, Header }
 })
 </script>
 
