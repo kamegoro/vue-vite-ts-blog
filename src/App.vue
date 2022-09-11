@@ -9,17 +9,19 @@
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <Footer />
 </template>
 
 <script lang="ts">
 import HelloWorld from './components/HelloWorld.vue';
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 import { 
   defineComponent,
 } from 'vue';
 
 export default defineComponent({
-  components: { HelloWorld, Header }
+  components: { HelloWorld, Header, Footer }
 })
 </script>
 
