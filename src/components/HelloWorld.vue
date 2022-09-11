@@ -1,11 +1,3 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ msg: string }>()
-
-const count = ref(0)
-</script>
-
 <template>
   <h1>{{ msg }}</h1>
 
@@ -30,6 +22,27 @@ const count = ref(0)
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
+
+<script lang="ts">
+import { 
+  defineComponent,
+  ref
+} from 'vue';
+
+export default defineComponent({
+  name: `HelloWorld`,
+  props: {
+    meg: String
+  },
+  setup(props) {
+    const count = ref(0);
+    return {
+      meg: props.meg,
+      count
+    }
+  }
+})
+</script>
 
 <style scoped>
 .read-the-docs {
