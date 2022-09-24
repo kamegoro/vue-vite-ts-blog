@@ -1,40 +1,26 @@
 <template>
-  <Header />
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-  <Footer />
+  <v-app>
+    <v-main>
+      <HelloWorld/>
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-import { 
-  defineComponent,
-} from 'vue';
+import { defineComponent } from 'vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
-  components: { HelloWorld, Header, Footer }
+  name: 'App',
+
+  components: {
+    HelloWorld,
+  },
+
+  data () {
+    return {
+      //
+    }
+  },
 })
 </script>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
