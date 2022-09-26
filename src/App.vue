@@ -1,14 +1,23 @@
 <template>
   <v-app>
-    <v-main>
-      <!-- <HelloWorld/> -->
-      <router-view></router-view>
+    <Header />
+    <v-main
+      :class='"main"'
+    >
+      <v-container 
+        fluid
+      >
+        <router-view></router-view>
+      </v-container>
     </v-main>
+    <Footer />
   </v-app>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
+import Footer from './components/Footer.vue';
+import Header from './components/Header.vue';
 import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent({
@@ -16,6 +25,8 @@ export default defineComponent({
 
   components: {
     HelloWorld,
+    Header,
+    Footer
   },
 
   data () {
@@ -25,3 +36,11 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+  .main {
+    background: rgb(29, 30, 32);
+    color: white;
+    width: 100%;
+  }
+</style>

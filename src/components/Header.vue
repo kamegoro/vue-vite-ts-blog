@@ -1,7 +1,13 @@
 <template>
-  <header>
-    <a href="/">kame blog</a>
-  </header>
+  <v-app-bar 
+    app
+    absolute
+    color="rgb(29, 30, 32)"
+  >
+    <v-toolbar-title>
+      <a href="/">kame blog</a>
+    </v-toolbar-title>
+  </v-app-bar>
 </template>
 
 <script lang="ts">
@@ -13,12 +19,7 @@ export default defineComponent({
 
 <style scoped>
   header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1100;
     width: 100%;
-    padding: 2rem;
     text-align: center;
   }
   a {
@@ -27,6 +28,7 @@ export default defineComponent({
     font-size: 24px;
     font-weight: 700;
     color: rgb(218, 218, 219);
+    text-decoration: none;
     font-family: BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu,Cantarell, open sans, helvetica neue, sans-serif;
   }
 </style>

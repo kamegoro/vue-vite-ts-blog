@@ -1,7 +1,16 @@
 <template>
-  <footer>
-    <a href="https://github.com/kamegoro" target="_blank">kamegoro</a>
-  </footer>
+  <v-footer 
+    padless
+  >
+    <v-col
+      class="text-center"
+      cols="12"
+    >
+      {{ new Date().getFullYear() }} — <strong>
+        <a href="https://github.com/kamegoro" target="_blank">kamegoro</a>
+      </strong>
+    </v-col>
+  </v-footer>
 </template>
 
 <script lang="ts">
@@ -20,11 +29,7 @@ export default defineComponent({
     width: 100%;
     padding: 0.6rem;
     text-align: center;
-  }
-  a {
-    font-size: 14px;
-    font-weight: 700;
-    color: rgb(218, 218, 219);
-    font-family: BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu,Cantarell, open sans, helvetica neue, sans-serif;
+    background: rgb(29, 30, 32);
+    color: white;
   }
 </style>
